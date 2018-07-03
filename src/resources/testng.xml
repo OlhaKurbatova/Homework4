@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Demo Suite" parallel="tests" thread-count="5">
+    <test name="Sub Cal Test">
+        <classes>
+            <class name="com.epam.cdp.olha.testng.SubCalcNgTest"/>
+        </classes>
+    </test>
+
+    <test name="All">
+        <packages>
+            <package name="com.epam.cdp.olha.testng"/>
+        </packages>
+    </test>
+
+    <test name="Pair operations">
+        <groups>
+            <run>
+                <include name="double"/>
+                <include name="long"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.epam.cdp.olha.testng"/>
+        </packages>
+    </test>
+
+    <test name="Special operations">
+        <groups>
+            <run>
+                <include name="special"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.epam.cdp.olha.testng"/>
+        </packages>
+    </test>
+
+</suite>
